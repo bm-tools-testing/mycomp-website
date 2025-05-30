@@ -1,0 +1,32 @@
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Company Info -->
+            <div>
+                <!-- CMS: Replace with company name -->
+                <h3 class="text-xl font-bold mb-4">Company Name</h3>
+                <!-- CMS: Replace with company info -->
+                <p class="text-gray-400">Your trusted partner in excellence</p>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <!-- CMS: Replace with contact info -->
+                <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                <p class="text-gray-400">Email: info@company.com</p>
+                <p class="text-gray-400">Phone: (555) 123-4567</p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-gray-400">
+                <p>&copy; <span id="year"></span> Company Name. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Simple script to update copyright year -->
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script> 

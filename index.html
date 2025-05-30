@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Company Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <main class="flex-grow">
+        <!-- Include Hero Section -->
+        <div id="hero-container"></div>
+
+        <!-- Include Gallery Section -->
+        <div id="gallery-container"></div>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Load Sections -->
+    <script>
+        // Function to load HTML content
+        async function loadSection(containerId, sectionPath) {
+            try {
+                const response = await fetch(sectionPath);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+            } catch (error) {
+                console.error(`Error loading section ${sectionPath}:`, error);
+            }
+        }
+
+        // Load all sections
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSection('header-container', 'sections/header.html');
+            loadSection('hero-container', 'sections/hero.html');
+            loadSection('gallery-container', 'sections/gallery.html');
+            loadSection('footer-container', 'sections/footer.html');
+        });
+    </script>
+</body>
+</html> 
